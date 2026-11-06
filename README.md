@@ -1,11 +1,13 @@
 # Onyx PvP
 
-A Fabric client mod for Minecraft PvP, focused on visuals, menus and replay tools. It's client-side and has about 38,000 lines of Java.
+A Fabric client mod for Minecraft PvP, focused on visuals, menus and replay tools. It runs on the client only.
 
-The full source is private. This repo describes the project and includes two of its shaders.
+The full source is private. This repo describes the project and includes two of its shaders. See [Releases](https://github.com/Perwds/onyx-pvp/releases) for notes on major versions, up to 1.6.37. There are no downloads here.
 
 ## Features
 
+- **World Look:** rain that wets the ground, puddles, sun shadows, deep snow, waving grass and lighting with saveable presets. No shader pack needed.
+- **RTX Remix preset:** a beta path tracing option for 1.21.11 on supported NVIDIA cards.
 - **Custom skies:** skies such as Deep Space, Black Hole and Aurora Night that turn with your camera, with far terrain faded into the sky so there's no fog seam.
 - **Combat visuals:** jump circles, target rings, hit markers, light trails, hand glow and explosion effects.
 - **Shaders:** 33 block and item shader presets with a custom effect editor.
@@ -13,6 +15,8 @@ The full source is private. This repo describes the project and includes two of 
 - **Replay tools:** clip recording, a replay editor with a timeline, and analysis of item switches, reach and CPS.
 - **Watch Together:** shared video links that play in sync, on a screen in the world.
 - **Spotify lyrics:** lyrics shown as text in the world, with 10 fonts and 9 animations.
+- **Maps and waypoints:** a minimap and a world map saved per server or world.
+- **Item maker:** build items in a visual editor, then copy the `/give` command.
 - **Item borders:** coloured borders for items and rarities in inventories and the hotbar.
 
 ## How it's built
