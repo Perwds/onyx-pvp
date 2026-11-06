@@ -9,10 +9,10 @@ Onyx is a client-side Fabric mod for Minecraft. It needs nothing on the server, 
 ![Version](https://img.shields.io/badge/Version-1.6.37-5b9bd5)
 ![Side](https://img.shields.io/badge/Side-Client%20only-0e1115)
 
-> The full source is private. This repo describes the project and includes two of its shaders.
-> See [Releases](https://github.com/Perwds/onyx-pvp/releases) for notes on major versions, up to 1.6.37. There are no downloads here.
+> The full source is private. This repo describes the project and includes a few code samples.
+> See [Releases](https://github.com/Perwds/onyx-pvp/releases) for notes on major versions, or the [changelog](CHANGELOG.md) for all of them. There are no downloads here.
 
-**Contents:** [At a glance](#at-a-glance) · [Features](#features) · [How it's built](#how-its-built) · [Shader samples](#shader-samples) · [Credits](#credits) · [Legal](#legal)
+**Contents:** [At a glance](#at-a-glance) · [Features](#features) · [How it's built](#how-its-built) · [Code samples](#code-samples) · [Credits](#credits) · [Legal](#legal)
 
 ## At a glance
 
@@ -81,10 +81,19 @@ Onyx is a client-side Fabric mod for Minecraft. It needs nothing on the server, 
 - 3D menu models are made in Blender with baked ambient occlusion and loaded through a custom mesh format.
 - Friend features are sealed with AES-GCM, using X25519 keys agreed between each pair of friends. A check code lets you confirm nobody swapped them.
 
-## Shader samples
+## Code samples
 
-- [`samples/sky.fsh`](samples/sky.fsh) draws the custom skies. It looks up each pixel by view direction, using camera data packed into a small texture.
-- [`samples/painted.fsh`](samples/painted.fsh) is the post-processing pass behind the Painted World filter.
+These are small parts of the project, taken from version 1.5.0. They show how it works, but they won't build on their own.
+
+| File | What it shows |
+|---|---|
+| [`samples/shaders/sky.fsh`](samples/shaders/sky.fsh) | Draws the custom skies, looking up each pixel by view direction using camera data packed into a small texture. |
+| [`samples/shaders/painted.fsh`](samples/shaders/painted.fsh) | The post-processing pass behind the Painted World filter. |
+| [`samples/java/ReplayAnalysis.java`](samples/java/ReplayAnalysis.java) | Reads a replay clip and lists item switches, totem pops, reach, CPS and aim snaps for every player, and flags anything inhumanly fast. |
+| [`samples/java/GuiMesh.java`](samples/java/GuiMesh.java) | Loads the custom `.omesh` format for 3D menu models, so they can follow the menu's theme. |
+| [`samples/blender/gui_models.py`](samples/blender/gui_models.py) | Builds the 3D menu models in Blender and exports them as `.omesh` files. |
+| [`samples/tests/combattag.txt`](samples/tests/combattag.txt) | One of the in-game test scripts, which plays through a feature and takes screenshots. |
+| [`samples/build/stonecutter.properties.toml`](samples/build/stonecutter.properties.toml) | The per-version settings that let one codebase build for four Minecraft versions. |
 
 ## Credits
 

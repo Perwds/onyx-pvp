@@ -1,0 +1,20 @@
+# Combat tag: hit -> in combat with countdown; server message sets the timer; then safe + last hit
+cmd gamemode survival
+set combatTagPlayersOnly false
+set combatTagSeconds 6
+wait 10
+shot 1_safe_start
+cmd damage @s 2 minecraft:generic
+wait 20
+shot 2_in_combat
+cmd tellraw @s "You are in combat! Combat: 25s"
+wait 20
+shot 3_server_timer
+cmd tellraw @s "You are no longer in combat."
+wait 30
+shot 4_safe_after
+cmd gamemode creative
+tab 1
+wait 10
+shot 5_settings
+close
